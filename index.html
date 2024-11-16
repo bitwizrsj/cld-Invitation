@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Romantic Candlelight Dinner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            overflow-x: hidden;
+            height: 200vh; /* Allow for scroll */
+            position: relative;
+            font-size: 18px;
+        }
+
+        /* Background flicker effect */
+        @keyframes backgroundFlicker {
+            0% { opacity: 0.7; }
+            50% { opacity: 0.85; }
+            100% { opacity: 0.7; }
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            animation: backgroundFlicker 3s infinite;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        }
+
+        /* Title Styling */
+        .invitation-title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 80px;
+            color: #FFBB33;
+            text-shadow: 0 0 20px rgba(255, 140, 0, 0.8), 0 0 40px rgba(255, 140, 0, 0.6);
+            margin-top: 20px;
+            animation: titleFadeIn 2s ease-in-out;
+        }
+
+        @keyframes titleFadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Message Box */
+        .invitation-message {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 180, 77, 0.9);
+            font-size: 20px;
+            line-height: 1.8;
+            text-align: center;
+            animation: messageFadeIn 3s ease-in-out;
+        }
+
+        @keyframes messageFadeIn {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .invitation-message h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .invitation-message p {
+            font-family: 'Lora', serif;
+            font-size: 18px;
+            color: #f5f5f5;
+        }
+
+        /* Button Styling */
+        .invitation-button {
+            background-color: #FFBB33;
+            color: white;
+            padding: 18px 36px;
+            font-size: 24px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 180, 77, 0.8);
+            animation: buttonGlow 1.5s ease-in-out infinite alternate;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @keyframes buttonGlow {
+            0% { box-shadow: 0 0 20px rgba(255, 180, 77, 0.7); }
+            100% { box-shadow: 0 0 40px rgba(255, 180, 77, 1); }
+        }
+
+        .invitation-button:hover {
+            background-color: #FF7A00;
+            box-shadow: 0 0 30px rgba(255, 140, 0, 0.8);
+        }
+
+        /* Flickering Candle Effect */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .flickering-light {
+            animation: flicker 2s infinite;
+        }
+
+        .candle-light {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: #FFD700;
+            text-shadow: 0 0 25px rgba(255, 180, 77, 0.7), 0 0 40px rgba(255, 140, 0, 0.5);
+            animation: flicker 2s infinite;
+        }
+
+        /* Music Player */
+        .music-player {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.7;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <!-- Invitation Title -->
+    <div class="invitation-title">
+        A Night to Remember...
+    </div>
+
+    <!-- Flickering Candle Animation -->
+    <div class="candle-light flickering-light">
+        🕯️💖🕯️
+    </div>
+
+    <!-- Invitation Message -->
+    <div class="invitation-message">
+        <h2>My Dearest Love,</h2>
+        <p>
+            Tonight, I've planned a beautiful evening just for us.  
+            Under the soft glow of candlelight, with the warmth of our hearts,  
+            let’s share a moment that will last forever.
+        </p>
+        <p>
+            🕯️ **Date:** 17/11/2024<br>
+            🕯️ **Time:** 00:00:00 am<br>
+            🕯️ **Location:** Telegram vc
+        </p>
+        <p>
+            Every moment with you is precious, and I can’t wait to make tonight unforgettable. 💖
+        </p>
+        <a href="javascript:void(0)" class="invitation-button">I Can’t Wait!</a>
+    </div>
+
+    <!-- Background Music -->
+    <audio class="music-player" controls autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+</html>
